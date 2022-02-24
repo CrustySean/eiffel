@@ -2,8 +2,7 @@
 
 #include <stratosphere.hpp>
 
-namespace efl {
-namespace ipc {
+namespace efl::ipc {
 
     class Server {
        private:
@@ -23,5 +22,4 @@ namespace ipc {
         static inline void Loop() { GetInstance().m_serverManager.LoopProcess(); }
     };
 
-}  // namespace ipc
-}  // namespace efl
+}  // namespace efl::ipc

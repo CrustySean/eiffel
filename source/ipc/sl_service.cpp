@@ -2,8 +2,7 @@
 
 #include "../util.hpp"
 
-namespace efl {
-namespace ipc {
+namespace efl::ipc {
 
     SlService::SlService() {}
 
@@ -15,5 +14,4 @@ namespace ipc {
         return 0;
     };
 
-};  // namespace ipc
-};  // namespace efl
+};  // namespace efl::ipc

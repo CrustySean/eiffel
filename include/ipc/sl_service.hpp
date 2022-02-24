@@ -6,8 +6,7 @@
 
 #include "../logger/types.hpp"
 
-namespace efl {
-namespace ipc {
+namespace efl::ipc {
 
     class SlService final : public ams::sf::IServiceObject {
        protected:
@@ -30,5 +29,4 @@ namespace ipc {
         static constexpr auto SERVICE_NAME = ams::sm::ServiceName::Encode(EIFFEL_SKYLINE_SERVICE_NAME);
     };
 
-};  // namespace ipc
-};  // namespace efl
+};  // namespace efl::ipc

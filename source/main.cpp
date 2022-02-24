@@ -2,23 +2,23 @@
 #include "util.hpp"
 
 extern "C" {
-extern u32 __start__;
+    extern u32 __start__;
 
-u32 __nx_applet_type = AppletType_None;
-u32 __nx_fs_num_sessions = 1;
+    u32 __nx_applet_type = AppletType_None;
+    u32 __nx_fs_num_sessions = 1;
 
-#define INNER_HEAP_SIZE 0x1000000
-size_t nx_inner_heap_size = INNER_HEAP_SIZE;
-char nx_inner_heap[INNER_HEAP_SIZE];
+    #define INNER_HEAP_SIZE 0x1000000
+    size_t nx_inner_heap_size = INNER_HEAP_SIZE;
+    char nx_inner_heap[INNER_HEAP_SIZE];
 
-void __libnx_initheap(void);
-void __appInit(void);
-void __appExit(void);
+    void __libnx_initheap(void);
+    void __appInit(void);
+    void __appExit(void);
 }
 
-namespace ams::result {
-
-bool CallFatalOnResultAssertion = true;
+namespace ams {
+    ncm::ProgramId CurrentProgramId = { 0x0100000000000144 };
+    namespace result { bool CallFatalOnResultAssertion = false; }
 
 }  // namespace ams::result
 
